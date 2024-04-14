@@ -1,6 +1,9 @@
 //alert('funcionou')
 
 
+
+//MENU DA VERSÃO MOBILE
+
 var btnmostrar = document.getElementById('iconMenu'); // icone  do menu
 var menu = document.getElementById('itens'); // menu a ser ocultado e/ou mostrado
 var logo = document.getElementById('logotipo'); // logotipo do site
@@ -37,19 +40,35 @@ btnOcultar.addEventListener('click', function () {
 // Slider da pagina de abertura pagina Index
 
 function slide1() {
-    document.getElementById('img1Carrosel').src = "imagens/bar-index.jpg";
+    document.getElementById('img1Carrosel').src = "imagens/utopia6.jpeg";
     setTimeout("slide2()", 3000)
 }
 
+
+
 function slide2() {
-    document.getElementById('img1Carrosel').src = "imagens/barman.jpg";
+    document.getElementById('img1Carrosel').src = "imagens/utopia2.jpeg";
     setTimeout("slide3()", 3000)
 }
 
 function slide3() {
-    document.getElementById('img1Carrosel').src = "imagens/comida-index.jpg";
+    document.getElementById('img1Carrosel').src = "imagens/utopia1.jpeg";
+    setTimeout("slide4()", 3000)
+}
+
+function slide4() {
+    document.getElementById('img1Carrosel').src = "imagens/utopia5.jpeg";
+    setTimeout("slide5()", 3000)
+}
+
+
+
+function slide5() {
+    document.getElementById('img1Carrosel').src = "imagens/group-cocktail-shot.jpg";
     setTimeout("slide1()", 3000)
 }
+
+
 
 // slider- cardapio pagina index
 
@@ -72,42 +91,40 @@ var updateSlide = () => {
 
 setInterval(nextSlide, intervalTime);
 
-// x = 0;
-// const slides = document.querySelectorAll('.slide');
-// const autoSlideInterval = 3000; // Intervalo de tempo em milissegundos para o slider automático
-
-// function showSlide(n) {
-//   if (n >= slides.length) {
-//     slideIndex = 0;
-//   }
-//   if (n < 0) {
-//     slideIndex = slides.length - 1;
-//   }
-//   for (let i = 0; i < slides.length; i++) {
-//     slides[i].classList.remove('active');
-//   }
-//   slides[slideIndex].classList.add('active');
-// }
-
-// function prevSlide() {
-//   showSlide(--slideIndex);
-// }
-
-// function nextSlide() {
-//   showSlide(++slideIndex);
-// }
-
-// function autoSlide() {
-//   nextSlide();
-//   setTimeout(autoSlide, autoSlideInterval);
-// }
-
-// showSlide(slideIndex); // Exibir o primeiro slide
-// autoSlide(); // Iniciar o slider automáticolet slideInde
 
 
+// CLICK DAS IMAGENS PAGINA INDEX
 
+var imagem = document.getElementById('imagemGaleria1');
+var imagem2 = document.getElementById('imagemGaleria2');
+var imagem3 = document.getElementById('imagemGaleria3');
+var imagem4 = document.getElementById('imagemGaleria4');
+var imagem5 = document.getElementById('imagemGaleria5');
+var imagem6 = document.getElementById('imagemGaleria6');
 
+imagem.addEventListener('click', () => {
+  imagem.classList.toggle('zoom');
+});
+
+imagem2.addEventListener('click', () => {
+    imagem2.classList.toggle('zoom');
+  });
+
+  imagem3.addEventListener('click', () => {
+    imagem3.classList.toggle('zoom');
+  });
+
+  imagem4.addEventListener('click', () => {
+    imagem4.classList.toggle('zoom');
+  });
+
+  imagem5.addEventListener('click', () => {
+    imagem5.classList.toggle('zoom');
+  });
+
+  imagem6.addEventListener('click', () => {
+    imagem6.classList.toggle('zoom');
+  });
 
 
 
@@ -121,4 +138,6 @@ var modal = document.getElementsByClassName('modal-container') //modal a ser exi
 reserva.onclick = function (){
     modal.style.display =='block'
 }
+
+
 

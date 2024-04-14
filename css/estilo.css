@@ -1,13 +1,12 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap');
+/*FONTE DA APRESENTAÇÃO PAGINA INDEX */
 
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+/* FONTE TITULA CARDAPIO PAGINA INDEX */
 
-
-@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Rubik+Mono+One&family=Rubik+Scribble&family=Workbench&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Racing+Sans+One&family=Rubik+Mono+One&family=Rubik+Scribble&family=Workbench&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 
 
@@ -26,15 +25,15 @@ hr {
 
 img {
     max-width: 100%;
-    margin-bottom: -40px;
 
 }
 
 /*Regras do Topo*/
 #topo {
+    position: fixed;
     background-color: white;
     /* height: 40px; */
-    background: linear-gradient(to left, #b7281bd5, rgb(233, 189, 189));
+    background: linear-gradient(to left, #812b24, rgb(233, 189, 189));
     position: relative;
     bottom: 22px;
     height: 40px;
@@ -99,6 +98,7 @@ nav a:visited,
     align-items: center;
     position: relative;
     bottom: 15px;
+    font-family: "Oswald", sans-serif;
 }
 
 nav a:hover,
@@ -111,14 +111,13 @@ nav a:focus,
 
 /*Regras para o FOOTER*/
 .rodape {
-    border-top: solid #B06761 5px;
-    background-color: #B06761;
-    color: #7f7f80;
+    background-color: #812b24;
     text-align: center;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: -15px;
 }
 
 .rodape p,
@@ -127,7 +126,7 @@ li {
 }
 
 .rodape img {
-    margin: 0 5px;
+    margin: 0 68px;
 }
 
 .rodape-conteudo {
@@ -139,16 +138,11 @@ li {
 
 }
 
-/* .rodape-conteudo ul {
-    list-style: none;
-    margin: o auto;
-    padding: 10px 0;
-} */
 
 #logo-rodape {
     min-width: 146px;
-    width: 150 px;
-    /* margin: 0 auto; */
+    width: 150px;
+
 }
 
 .endereco {
@@ -158,10 +152,14 @@ li {
 }
 
 .endereco h1 {
-    /* color: #fbae16; */
-    /* font-family: "Oswald", Sans-serif; */
+    color: #e7d0a2;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
     text-transform: uppercase;
     font-size: 25px;
+
 }
 
 #logo-rodape img {
@@ -170,19 +168,13 @@ li {
     max-width: 150px;
 }
 
-/* .menu-rodape a {
-    text-decoration: none;
-    color: #7f7f80;
-} */
+
 
 .menu-rodape a:hover {
     color: #fff;
 }
 
-/* .redes img {
-    min-width: 35px;
-    width: 35px;
-} */
+
 
 .assinatura {
     color: #fff;
@@ -211,46 +203,17 @@ hr {
     background: linear-gradient(to left, #b7281bd5, rgb(233, 189, 189));
     color: white;
     text-align: center;
-    margin-top: 40px;
+    margin-top: -35px;
     font-family: "Gloria Hallelujah", cursive;
     font-style: normal;
     font-size: 10pt;
-
-
 }
 
 /*---------------------------CARROSEL / SLIDER --------------------------*/
-/* #carrosel {
-    margin: -15px 5px;
-    
-}
-#img1Carrosel{
-    transition: opacity 0.5s ease;
-} */
-
-/* .slider-container {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .slider {
-    display: flex;
-  }
-  
-  .slide {
-    flex: 0 0 100%;
-    opacity: 0;
-    transition: opacity 1s ease; /* Transição de fade */
-/* }
-  
-  .slide.active {
-    opacity: 1;
-  }
-  
-  .slide img {
+ #img1Carrosel{
+    height: 250px;
     width: 100%;
-  } */
+ }
 
 .slider {
     max-width: 100%;
@@ -261,7 +224,8 @@ hr {
 
 .slides {
     display: flex;
-    transition: transform 1s ease;
+    transition: transform 2s ease;
+
 }
 
 .slide {
@@ -279,10 +243,7 @@ hr {
 }
 
 .text-Sejabemvindo {
-    font-size: 26px;
-    font-family: "EB Garamond", serif;
-    font-optical-sizing: auto;
-
+    font-size: 16px;
 }
 
 .bem-vindo img {
@@ -298,17 +259,23 @@ hr {
 }
 
 .bem-vindo p {
-    margin-bottom: 50px;
+
     text-align: center;
 }
 
 .bem-vindo h2 {
-    font-family: "Racing Sans One", sans-serif;
-    font-weight: 400;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
     font-style: normal;
     margin-top: 35px;
-    font-size: 16pt;
-    margin-bottom: -5px;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: -3%;
+}
+
+.texto1 {
+    max-width: 292px;
 }
 
 .cozinha1 {
@@ -332,6 +299,37 @@ hr {
 .galeria img {
     width: 101px;
     height: 85px;
+    transition: transform 0.5s;
+}
+
+#imagemGaleria1.zoom {
+    transform: scale(2.5);
+    /* Ajuste o fator de escala conforme necessário */
+}
+
+#imagemGaleria2.zoom {
+    transform: scale(2.5);
+    /* Ajuste o fator de escala conforme necessário */
+}
+
+#imagemGaleria3.zoom {
+    transform: scale(2.5);
+    /* Ajuste o fator de escala conforme necessário */
+}
+
+#imagemGaleria4.zoom {
+    transform: scale(2.5);
+    /* Ajuste o fator de escala conforme necessário */
+}
+
+#imagemGaleria5.zoom {
+    transform: scale(2.5);
+    /* Ajuste o fator de escala conforme necessário */
+}
+
+#imagemGaleria6.zoom {
+    transform: scale(2.5);
+    /* Ajuste o fator de escala conforme necessário */
 }
 
 .imagensCozinha img {
@@ -345,10 +343,11 @@ hr {
 
 .vejaCardapio {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 5px;
     margin-top: 30px;
     background-color: black;
     color: white;
+    padding: 5px;
 }
 
 .vejaCardapio button {
@@ -359,11 +358,25 @@ hr {
     margin-bottom: 15px;
 }
 
+button a {
+    text-decoration: none;
+    color: white;
+}
+
 .vejaCardapio img {
     width: 100%;
     height: 390px;
     margin: 0px;
 }
+
+.vejaCardapio h1 {
+    font-size: 25px;
+    font-family: "Alegreya SC", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
 
 /*REGRAS PARA CARDAPIO (PAGINA CARDAPIO)*/
 .menu-cardapios {
@@ -406,7 +419,9 @@ hr {
     color: #B06761;
 }
 
-/*CARD CARDAPIO*/
+
+
+/*CARD CARDAPIO  PAGINA CARDAPIO*/
 .card-cardapio img {
     width: 75px;
     height: 70px;
@@ -607,11 +622,25 @@ hr {
         width: 70%;
     }
 
+    .vejaCardapio {
+        padding: 12px;
+
+    }
+
+    .vejaCardapio h1 {
+        font-size: 50px;
+    }
+
+    .vejaCardapio p {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
 
     /*FOOTER PARA TABLET */
 
     .rodape {
-        background-color: #B06761;
+
         color: #7f7f80;
         text-align: center;
         width: 100%;
@@ -647,27 +676,11 @@ hr {
     }
 
     #logo-rodape img {
-        margin-top: 0px;
+        margin-left: 0px;
         width: 100%;
-        max-width: 100px;
+        max-width: 150px;
     }
 
-    .menu-cardapios {
-        margin-top: 90px;
-    }
-
-    .card-cardapio {
-        width: 368px;
-
-
-    }
-
-    .cardapio-t {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 11px;
-
-    }
 
 
     /* TOPO PARA TABLET */
@@ -699,14 +712,18 @@ hr {
     }
 
     #carrosel img {
-        margin-top: 97px;
+        margin-top: 81px;
     }
 
 
     /* MAIN PARA TABLET */
 
+    .frase {
+        margin-top: -35px;
+    }
+
     .bem-vindo {
-        padding: 30px;
+        padding: 10px;
     }
 
     .bem-vindo img {
@@ -715,18 +732,33 @@ hr {
     }
 
     .bem-vindo p {
-
+        font-size: 16px;
         text-align: center;
         margin-top: 25px;
     }
 
     .bem-vindo h2 {
-        font-family: "Racing Sans One", sans-serif;
-        font-weight: 400;
+
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
         font-style: normal;
-        margin-top: 35px;
-        /* font-size: 16pt; */
-        /* margin-bottom: -5px;*/
+        font-size: 35px;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+
+    }
+
+    .card-bemvindo {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-bemvindo p {
+        
+        text-align: center;
     }
 
     .imagensCozinha {
@@ -736,11 +768,13 @@ hr {
 
     .cozinha1 {
         display: flex;
-        gap: 36px;
         justify-content: center;
+        gap: 15px;
         flex-wrap: nowrap;
         margin-bottom: 45px;
     }
+
+
 
     .galeria {
         display: flex;
@@ -754,13 +788,45 @@ hr {
     .galeria img {
         height: 158px;
         width: 216px;
+        transition: transform 0.5s;
+        cursor: pointer;
     }
+
+    #imagemGaleria1.zoom {
+        transform: scale(1.6);
+        /* Ajuste o fator de escala conforme necessário */
+    }
+
+    #imagemGaleria2.zoom {
+        transform: scale(1.6);
+        /* Ajuste o fator de escala conforme necessário */
+    }
+
+    #imagemGaleria3.zoom {
+        transform: scale(1.6);
+        /* Ajuste o fator de escala conforme necessário */
+    }
+
+    #imagemGaleria4.zoom {
+        transform: scale(1.6);
+        /* Ajuste o fator de escala conforme necessário */
+    }
+
+    #imagemGaleria5.zoom {
+        transform: scale(1.6);
+        /* Ajuste o fator de escala conforme necessário */
+    }
+
+    #imagemGaleria6.zoom {
+        transform: scale(1.6);
+        /* Ajuste o fator de escala conforme necessário */
+    }
+
 
     .texto1 {
         text-align: center;
-        width: 200px;
+        max-width: 200px;
         margin-top: -6px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 10pt;
         color: black;
         font-style: italic;
@@ -770,6 +836,26 @@ hr {
 
     hr {
         display: none;
+    }
+
+
+    /*PAGINA CARDAPIO TABLET */
+
+    .menu-cardapios {
+        margin-top: 90px;
+    }
+
+    .card-cardapio {
+        width: 368px;
+
+
+    }
+
+    .cardapio-t {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 11px;
+
     }
 
 }
@@ -809,8 +895,21 @@ hr {
 
     .texto1 {
         width: 345px;
+        margin-left: -110px;
     }
 
+    .vejaCardapio h1 {
+        font-size: 70px;
+        font-family: "Alegreya SC", serif;
+        font-weight: 700;
+        font-style: normal;
+        margin: 0px;
+    }
+
+    .vejaCardapio img {
+        width: 60%;
+        height: 600px;
+    }
 
     #carrosel {
         margin-top: 42px;
@@ -823,13 +922,13 @@ hr {
 
     #carrosel img {
         width: 100%;
-        height: 516px;
+        height: 750px;
         margin-top: 40px;
 
     }
 
     .frase {
-        margin-top: -10px;
+        margin-top: -27px;
     }
 
 
@@ -866,25 +965,47 @@ hr {
 
     /* FOOTER DESKTOP */
 
-    .endereco{
+    .endereco {
         display: flex;
         align-items: center;
         /* margin-top: 40px; */
         display: flex;
         gap: 152px;
+        font-size: 30px;
+    }
+
+    .endereco h1 {
+        font-size: 30px;
     }
 
     .rodape-conteudo {
         gap: 30px;
     }
 
+    .rodape {
+        padding: 30px;
+    }
+
+    iframe {
+        height: 600px;
+    }
+
+
+
+    /* MAIN PARA DESKTOP */
+
     .bemVindoGeral {
-        margin-top: 50px;
+        margin-top: 283px;
     }
 
     .bem-vindo img {
         width: 426px;
         height: 352px;
+    }
+
+    .bem-vindo h2 {
+        font-size: 65px;
+        margin-top: -20px;
     }
 
 
@@ -905,14 +1026,8 @@ hr {
         height: 135px;
     }
 
-    .menu-cardapios {
-        margin-top: 50px;
-    }
 
-    .pratos {
 
-        flex-wrap: nowrap;
-    }
 
     /* PAGINA RESERVA PARA DESKTOP */
     .titulo-confirm-reserva {
