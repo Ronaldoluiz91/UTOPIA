@@ -2,6 +2,7 @@
 
 
 
+
 //MENU DA VERSÃO MOBILE
 
 var btnmostrar = document.getElementById('iconMenu'); // icone  do menu
@@ -34,7 +35,10 @@ btnmostrar.addEventListener('click', function () {
 btnOcultar.addEventListener('click', function () {
     menu.style.display = 'none';
     logo.style.display = 'block'
-})
+});
+
+
+
 
 
 // Slider da pagina de abertura pagina Index
@@ -43,8 +47,6 @@ function slide1() {
     document.getElementById('img1Carrosel').src = "imagens/utopia6.jpeg";
     setTimeout("slide2()", 3000)
 }
-
-
 
 function slide2() {
     document.getElementById('img1Carrosel').src = "imagens/utopia2.jpeg";
@@ -60,8 +62,6 @@ function slide4() {
     document.getElementById('img1Carrosel').src = "imagens/utopia5.jpeg";
     setTimeout("slide5()", 3000)
 }
-
-
 
 function slide5() {
     document.getElementById('img1Carrosel').src = "imagens/group-cocktail-shot.jpg";
@@ -93,51 +93,47 @@ setInterval(nextSlide, intervalTime);
 
 
 
-// CLICK DAS IMAGENS PAGINA INDEX
 
-var imagem = document.getElementById('imagemGaleria1');
-var imagem2 = document.getElementById('imagemGaleria2');
-var imagem3 = document.getElementById('imagemGaleria3');
-var imagem4 = document.getElementById('imagemGaleria4');
-var imagem5 = document.getElementById('imagemGaleria5');
-var imagem6 = document.getElementById('imagemGaleria6');
-
-imagem.addEventListener('click', () => {
-  imagem.classList.toggle('zoom');
-});
-
-imagem2.addEventListener('click', () => {
-    imagem2.classList.toggle('zoom');
-  });
-
-  imagem3.addEventListener('click', () => {
-    imagem3.classList.toggle('zoom');
-  });
-
-  imagem4.addEventListener('click', () => {
-    imagem4.classList.toggle('zoom');
-  });
-
-  imagem5.addEventListener('click', () => {
-    imagem5.classList.toggle('zoom');
-  });
-
-  imagem6.addEventListener('click', () => {
-    imagem6.classList.toggle('zoom');
-  });
 
 
 
 //Modal pagina reserva 
 
-var reserva = document.getElementById('confirm-reserva'); //botao enviar reserva
-var modal = document.getElementsByClassName('modal-container') //modal a ser exibido
+var modal = document.getElementById("modal-container"); //modal
+var btnReserva = document.getElementById("reservar"); //botão enviar reserva
+var span = document.getElementsByClassName("close")[0]; //botao fechar modal
 
 
+btnReserva.onclick = function () {
+    var nome = document.getElementById('nome').value;
+    var telefone = document.getElementById('telefone').value;
+    var reserva = document.getElementById('reserva').value;
+    var quantidade = document.getElementById('quantidade').value;
+    var data = document.getElementById('data').value;
+    var horario = document.getElementById('horario').value;
 
-reserva.onclick = function (){
-    modal.style.display =='block'
+
+    if (nome || telefone || reserva || quantidade || data || horario === '') {
+        alert('preencha todos os campos')
+    }
+
+    else {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
 }
+
+
+// window.onclick = function (event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
+
+
 
 
 
