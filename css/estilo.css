@@ -26,7 +26,7 @@ body {
 
 }
 
-.conteudo{
+.conteudo {
     width: 100%;
 }
 
@@ -479,7 +479,7 @@ button a {
 /*Pagina reserva*/
 
 
-#forme-reserva{
+#forme-reserva {
     margin: 5px;
 }
 
@@ -501,7 +501,7 @@ button a {
 }
 
 .conteudo-reserva {
-    margin: 5%;
+    margin-left: 17%;
     text-align: center;
     background-color: #B06761;
     border-radius: 15px;
@@ -518,17 +518,34 @@ button a {
 
 
 
-#modal-container{
-    background-color: #000000;
-    color: white;
-    width: 65%;
+#modal-container {
+    background-color: #ffffff;
+    color: black;
+    width: 60%;
     height: 75px;
     padding: 10px;
     margin-left: 40px;
     position: absolute;
-    margin-top: -300px;
+    margin-top: -476px;
+    font-weight: bold;
+    border-radius: 15px;
+    margin-left: 70px;
+    box-shadow: black 1px 1px 10px;
     display: none;
 }
+
+#modal-container p {
+    margin-top: -5px;
+    margin-left: 25px;
+}
+
+
+.close-modal {
+    font-size: 35px;
+    margin-left: 90%;
+}
+
+
 
 
 
@@ -825,6 +842,19 @@ button a {
     .conteudo-reserva {
         margin-top: 15%;
     }
+
+    /*MODAL */
+
+    #modal-container {
+        height: 117px;
+        margin-left: 35%;
+        margin-top: -420px;
+        width: 35%;
+    }
+
+    .close-modal{
+        margin-left: 95%;
+    }
 }
 
 
@@ -832,7 +862,7 @@ button a {
 
 @media screen and (min-width:1200px) {
 
- /* MENU DESKTOP */
+    /* MENU DESKTOP */
 
     #topo {
         position: fixed;
@@ -943,7 +973,7 @@ button a {
         margin-left: -110px;
     }
 
-    .galeria img{
+    .galeria img {
         width: 400px;
         height: 250px;
     }
@@ -1000,7 +1030,7 @@ button a {
     .card-cardapio img {
         width: 195px;
         height: 170px;
-        
+
     }
 
     .card-cardapio p {
@@ -1009,9 +1039,9 @@ button a {
 
     }
 
-.conteudo-cardapio{
-    margin: 2px;
-}
+    .conteudo-cardapio {
+        margin: 2px;
+    }
 
     .conteudo-cardapio h3 {
         font-family: "Alegreya SC";
@@ -1042,13 +1072,13 @@ button a {
 
 
     /* PAGINA RESERVA PARA DESKTOP */
-  
-    #form-reserva{
+
+    #form-reserva {
         max-width: 700px;
         margin: auto;
     }
 
-    .conteudo-reserva{
+    .conteudo-reserva {
         margin-top: 10%;
         margin-bottom: 10%;
     }

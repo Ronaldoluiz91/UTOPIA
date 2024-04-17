@@ -113,12 +113,12 @@ btnReserva.onclick = function () {
     var horario = document.getElementById('horario').value;
 
 
-    if (nome || telefone || reserva || quantidade || data || horario === '') {
-        alert('preencha todos os campos')
+    if (nome || telefone || reserva || quantidade || data || horario !== '') {
+        modal.style.display = "block";
     }
 
     else {
-        modal.style.display = "block";
+        alert('preencha todos os campos')
     }
 
     span.onclick = function () {
