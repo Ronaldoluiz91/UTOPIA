@@ -1030,12 +1030,6 @@ button a {
         gap: 0px;
     }
 
-    /* .card-cardapio {
-        width: 941px;
-        height: 170px;
-        gap: 80px;
-    } */
-
     .card-cardapio img {
         width: 195px;
         height: 170px;
@@ -1104,23 +1098,7 @@ button a {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Pagina cardapio para notebook */
-
 
 @media screen and (min-width:1024PX) {
 
@@ -1132,9 +1110,6 @@ button a {
         gap: 2PX;
     }
 }
-
-
-
 
 
 /*CARDS DA PAGINA CARDAPIO  NOTEBOOK */
@@ -1150,6 +1125,8 @@ button a {
 
 
 
+
+
 /*CARDS DA PAGINA CARDAPIO  DESKTOP TELA MAIOR */
 @media screen and (min-width:1910PX) {
 
@@ -1159,7 +1136,6 @@ button a {
         gap: 80px;
     }
 }
-
 
 @media screen and (min-width:2550PX) {
 

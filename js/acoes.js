@@ -101,23 +101,25 @@ setInterval(nextSlide, intervalTime);
 
 var modal = document.getElementById("modal-container"); //modal
 //var btnReserva = document.getElementById("reservar"); //botão enviar reserva
-var span = document.getElementsByClassName("close")[0]; //botao fechar modal
-var nome = document.getElementById('nome');
-    var telefone = document.getElementById('telefone').value;
-    var reserva = document.getElementById('reserva').value;
-    var quantidade = document.getElementById('quantidade').value;
-    var data = document.getElementById('data').value;
-    var horario = document.getElementById('horario').value;
+
+var span = document.getElementsByClassName("close"); //botao fechar modal
+
+
+var nome = document.getElementById('nomeReserva');
+var telefone = document.getElementById('telefoneReserva');
+var reserva = document.getElementById('reserva');
+var quantidade = document.getElementById('quantidade');
+var data = document.getElementById('data');
+var horario = document.getElementById('horario');
 
 
 
-function enviar(){
-    alert("funcionou!")
-    alert(nome)
+function enviar() {
     
 
-
-    if (nome ==="" || telefone ==="" || reserva ==="" || quantidade ==="" || data==="" || horario ==="") {
+    alert(nome)
+    
+    if (nome === "" || telefone === "" || reserva === "" || quantidade === "" || data === "" || horario === "") {
         alert('preencha todos os campos')
         // modal.style.display = "block";
     }
@@ -126,10 +128,21 @@ function enviar(){
         // alert('preencha todos os campos')
         modal.style.display = "block";
     }
-    // span.onclick = function () {
-    //     modal.style.display = "none";
-    // }
+
+}
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
     }
+}
+
+
+
+
+
+
+
 
 
 
