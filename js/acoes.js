@@ -1,8 +1,6 @@
 //alert('funcionou')
 
 
-
-
 //MENU DA VERSÃO MOBILE
 
 var btnmostrar = document.getElementById('iconMenu'); // icone  do menu
@@ -93,89 +91,57 @@ setInterval(nextSlide, intervalTime);
 
 
 
+//Pagina reserva
+
+function enviarReserva(){
+var nome = document.getElementById('nomeReserva').value;
+var telefone = document.getElementById('telefoneReserva').value;
+var reserva = document.getElementById('reserva').value;
+var quantidade = document.getElementById('quantidade').value;
+var horario = document.getElementById('horarioReserva').value;
+var status = document.getElementById('status')
+
+var inputDate = document.getElementById('dataReserva');
+// Adicionando um ouvinte de evento 'change' para capturar a mudança de valor
+inputDate.addEventListener('change', function() {
+    // Obtendo o valor do input
+    var dataReserva = this.value;
+});
 
 
-
-
-//Modal pagina reserva 
-
-var modal = document.getElementById("modal-container"); //modal
-//var btnReserva = document.getElementById("reservar"); //botão enviar reserva
-
-var span = document.getElementsByClassName("close"); //botao fechar modal
-
-
-var nome = document.getElementById('nomeReserva');
-var telefone = document.getElementById('telefoneReserva');
-var reserva = document.getElementById('reserva');
-var quantidade = document.getElementById('quantidade');
-var data = document.getElementById('data');
-var horario = document.getElementById('horario');
-
-
-
-function enviar() {
-    
-
-    alert(nome)
-    
-    if (nome === "" || telefone === "" || reserva === "" || quantidade === "" || data === "" || horario === "") {
+    if (nome === "" || telefone === "" || reserva === "" || quantidade === "" || dataReserva === "" || horario === "") {
         alert('preencha todos os campos')
-        // modal.style.display = "block";
-    }
+} else {
+    document.getElementById('reservaRelatorio').innerHTML = nome
+    document.getElementById('telRelatorio').innerHTML = telefone
+    document.getElementById('tipoRelatorio').innerHTML = reserva
+    document.getElementById('quantRelatorio').innerHTML = quantidade
+    document.getElementById('dataRelatorio').innerHTML = dataReserva.value
+    document.getElementById('horaRelatorio').innerHTML = horario
 
-    else {
-        // alert('preencha todos os campos')
-        modal.style.display = "block";
-    }
+    status.style.display ='block'
 
+    var modalRelatorio = document.getElementById('modal-relatorio')
+
+    modalRelatorio.style.display ='block'
+
+
+      // Limpar os campos após enviar
+      document.getElementById('nomeReserva').value = "";
+      document.getElementById('telefoneReserva').value = "";
+      document.getElementById('reserva').value = "";
+      document.getElementById('quantidade').value = "";
+      document.getElementById('dataReserva').value = "";
+      document.getElementById('horarioReserva').value = "";
+
+    } 
+  
 }
 
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+function fechaModal(){
+    var modalRelatorio = document.getElementById('modal-relatorio'); // Definido dentro da função
+
+    modalRelatorio.style.display = 'none';
 }
-
-
-
-
-
-
-
-
-
-
-// btnReserva.onclick = function () {
-//     var nome = document.getElementById('nome').value;
-//     var telefone = document.getElementById('telefone').value;
-//     var reserva = document.getElementById('reserva').value;
-//     var quantidade = document.getElementById('quantidade').value;
-//     var data = document.getElementById('data').value;
-//     var horario = document.getElementById('horario').value;
-
-
-//     if (nome || telefone || reserva || quantidade || data || horario !== '') {
-//         modal.style.display = "block";
-//     }
-
-//     else {
-//         alert('preencha todos os campos')
-//     }
-
-//     span.onclick = function () {
-//         modal.style.display = "none";
-//     }
-// }
-
-
-// window.onclick = function (event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }
-
-
-
 
 

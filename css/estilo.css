@@ -30,9 +30,9 @@ body {
     width: 100%;
 }
 
-hr {
+/* hr {
     max-width: 150px;
-}
+} */
 
 img {
     max-width: 100%;
@@ -113,8 +113,8 @@ nav a:visited,
     align-items: center;
     position: relative;
     bottom: 15px;
-    font-family: "Oswald", sans-serif;
-    
+    font-family: "open sans", sans-serif;
+
 }
 
 nav a:hover,
@@ -281,16 +281,21 @@ hr {
     margin-top: -3%;
 }
 
+.card-bemvindo{
+    box-shadow: grey 1px 1px 6px;
+    border-radius: 5px;
+}
+
 .texto1 {
     max-width: 292px;
 }
 
 .cozinha1 {
     display: flex;
-    /* gap: 0px; */
+    gap: 15px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     /* margin-left: 92px; */
 }
 
@@ -357,12 +362,12 @@ button a {
 
 
 /*REGRAS PARA CARDAPIO (PAGINA CARDAPIO)*/
-.menu-cardapios {
+/* .menu-cardapios {
     display: flex;
     align-items: center;
     justify-content: space-around;
-}
-
+} */
+/* 
 .menu-cardapios h3 {
     color: black;
     margin: 10px;
@@ -371,6 +376,25 @@ button a {
     border-radius: 5px;
     padding: 10px;
     box-shadow: grey 1px 1px 6px;
+} */
+
+
+.menu-cardap{
+text-align: center;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    padding: 2px;
+    
+    
+}
+.menu-cardap a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu-cardap hr{
+    width: 100%;
 }
 
 .item-cardapios:hover {
@@ -476,13 +500,17 @@ button a {
     text-align: center;
 }
 
+
+
 /*Pagina reserva*/
 
-
-#forme-reserva {
+#form-reserva {
     margin: 5px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 
 #form-reserva input,
 #form-reserva select {
@@ -496,14 +524,14 @@ button a {
     height: 30px;
 }
 
-#form-reserva label {
-    font-weight: bold;
+#form-reserva p {
+    margin-bottom: auto;
 }
 
 .conteudo-reserva-pai {
-    display: flex;
     justify-content: center;
-    margin: 5%;
+    margin: 3%;
+    display: flex;
 }
 
 .conteudo-reserva {
@@ -521,22 +549,75 @@ button a {
     border-radius: 5px;
 }
 
-
-
-#modal-container {
-    background-color: #ffffff;
-    color: black;
-    width: 90%;
-    height: 100px;
+#reservar {
+    box-shadow: black 1px 1px 2px;
+    border: black;
     padding: 10px;
-    margin-left: 40px;
+    width: 80px;
+    /* margin-left: 140px; */
+    margin-top: 15px;
+    background-color: white;
+    color: black;
+    border-radius: 55px;
+}
+
+
+#closeModal {
+    margin-left: 90%;
+    cursor: pointer;
+}
+
+#modal-relatorio {
+    margin-top: 120px;
+    background-color: white;
+    /* height: 260px; */
+    /* width: 60%; */
+    border-radius: 10px;
+    box-shadow: black 1px 1px 5px;
     position: absolute;
-    margin-top: 170px;
-    font-weight: bold;
-    border-radius: 15px;
-    margin-left: 0px;
-    box-shadow: black 1px 1px 10px;
+    /* margin-left: 28px; */
+    padding: 2%;
     display: none;
+    
+
+}
+
+.modal-geral {
+    display: flex;
+    /* margin-top: 50px; */
+    margin-left: 5px;
+    gap: 41px;
+    font-weight: bold;
+    font-family: "open sans";
+}
+
+
+.modal1 img {
+    width: 110px;
+    height: 100px;
+    margin-top: -15px;
+}
+
+.modalAnime {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 5px;
+    gap: 75px;
+}
+
+
+.relatorio1 {
+    font-size: 10px;
+}
+
+.relatorioReserva {
+    font-size: 10px;
+
+}
+
+#status {
+    color: green;
+    font-weight: bold;
 }
 
 
@@ -685,6 +766,7 @@ button a {
         width: 100%;
         height: 80px;
     }
+    
 
     #itens {
         display: block;
@@ -826,8 +908,27 @@ button a {
 
     /*PAGINA CARDAPIO TABLET */
 
-    .menu-cardapios {
+    /* .menu-cardapios {
         margin-top: 90px;
+    } */
+
+    .menu-cardap{
+      
+        display: flex;
+        margin-top: 126px;
+        height: 50px;
+    }
+
+    .menu-cardap a{
+
+        margin: auto;
+    margin-bottom: 0px;
+    margin-top: 18px;
+        
+    }
+
+    .menu-cardap hr{
+        display: none;
     }
 
     .card-cardapio {
@@ -843,6 +944,10 @@ button a {
 
     }
 
+    .conteudo-cardapio h3{
+        margin-top: 0px;
+    }
+
 
     /* PAGINA RESERVA PARA TABLET */
 
@@ -853,11 +958,44 @@ button a {
 
     /*MODAL */
 
-    #modal-container {
-        height: 117px;
-        margin-left: 0%;
-        margin-top: 200px;
-        width: 35%;
+    #closeModal {
+        margin-left: 95%;
+        cursor: pointer;
+    }
+
+    #modal-relatorio {
+        margin-top: 213px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        width: 45%;
+    }
+
+    .modal-geral {
+        /* margin-left: 80px;
+        gap: 35px; */
+    }
+
+    .modalAnime {
+        gap: 110px;
+    }
+
+    .modalAnime h4 {
+        font-size: 20px;
+    }
+
+
+    .conteudo-reserva {
+        width: 100%;
+    }
+
+    .relatorio1 {
+        font-size: 15px;
+    }
+
+    .relatorioReserva {
+        font-size: 15px;
     }
 
 
@@ -865,6 +1003,9 @@ button a {
         margin-left: 95%;
     }
 }
+
+
+
 
 
 /* TELA RESPONSIVA PARA DESKTOP */
@@ -1076,24 +1217,87 @@ button a {
 
     /* PAGINA RESERVA PARA DESKTOP */
 
-    #form-reserva {
-        max-width: 60%;
-        margin: auto;
-        margin-top: 65px;
-    }
+
 
     .conteudo-reserva {
         margin-top: 5%;
         width: 800px;
-        height: 600PX;
+        height: 650PX;
     }
 
-    .text-modal {
-        text-align: center;
-        font-size: 30px;
-        margin: 0;
+    #status {
+        display: none;
     }
+
+    /* 
+    #modal-relatorio {
+        margin-top: 240px;
+        background-color: white;
+        height: 260px;
+        width: 370px;
+        border-radius: 10px;
+        box-shadow: black 1px 1px 5px;
+        position: absolute;
+        display: none;
+        margin-left: 100px;
+        padding: 30px;
+    } */
+
+    /* .relatorio1{
+        display: none;
+    } */
+
+
+    #modal-relatorio {
+        margin-top: 75px;
+        margin-left: 0%;
+        width: 460px;
+        height: 440px;
+    }
+
+    .modal1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -50px;
+    }
+
+    .modal1 img {
+        width: 150px;
+        height: 160px;
+        margin-top: -40px;
+    }
+
+
+    .conteudo-reserva {
+        height: 565px;
+        width: 50%;
+    }
+
+    /* #reservar {
+        margin-left: 45%;
+    } */
+
+    .relatorio1 {
+        font-size: 20px;
+    }
+
+    .relatorioReserva {
+        font-size: 20px;
+    }
+
+    .modalAnime {
+
+        margin-left: -70px;
+        gap: 146px;
+    }
+
+    .modalAnime h4 {
+        font-size: 30px;
+    }
+
 }
+
 
 
 
