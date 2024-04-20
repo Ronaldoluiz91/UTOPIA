@@ -208,9 +208,11 @@ hr {
     background: linear-gradient(to left, #b7281bd5, rgb(233, 189, 189));
     color: white;
     text-align: center;
-    margin-top: -35px;
+    margin-top: -34px;
     font-style: normal;
-    font-size: 10pt;
+    font-size: 11px;
+    font-family: 'Alegreya SC';
+    
 }
 
 /*---------------------------CARROSEL / SLIDER --------------------------*/
@@ -278,10 +280,6 @@ hr {
     margin-top: -3%;
 }
 
-.card-bemvindo{
-    box-shadow: grey 1px 1px 6px;
-    border-radius: 5px;
-}
 
 .texto1 {
     max-width: 292px;
@@ -676,7 +674,7 @@ text-align: center;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 60%;
   }
   
   /* Estilos para o botão de fechar */
