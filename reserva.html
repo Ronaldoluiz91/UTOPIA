@@ -55,19 +55,13 @@
 
             <form id="form-reserva" method="post">
 
-
-                <!-- <label for="nome">Nome:</label> -->
-
                 <p>Nome</p>
                 <input tabindex="1" type="text" id="nomeReserva" name="nomeReserva">
 
-
-                <!-- <label for="telefone">Whatsapp:</label> -->
                 <p>Whatsapp</p>
                 <input tabindex="2" type="text" id="telefoneReserva" name="telefoneReserva">
 
 
-                <!-- <label for="reserva">Tipo de reserva:</label> -->
                 <p>Tipo de Reserva:</p>
                 <select name="reserva" id="reserva">
                     <option value=""></option>
@@ -76,8 +70,6 @@
                     <option value="Evento">Evento (mais de 30 pessoa)</option>
                 </select>
 
-
-                <!-- <label for="quantidade">Quantidade de pessoas:</label> -->
                 <p>Quantidade de Pessoas:</p>
                 <select type="number" name="quantidade" id="quantidade">
                     <option value=""></option>
@@ -93,12 +85,10 @@
                     <option value="10">10 pessoas</option>
                 </select>
 
-                <!-- <p> <label>Data:</label> -->
                 <p>Data</p>
                 <input type="date" id="dataReserva" name="dataReserva">
 
-                <!-- <label for="horario">Horario:</label> -->
-
+    
                 <p>Horario:</p>
                 <select type="times" name="horario" id="horarioReserva">
                     <option value=""></option>
@@ -116,7 +106,15 @@
                 <!-- <button tabindex="11" id="reservar" name="enviar" onclick="enviarReserva()"> Reservar</button> -->
             </form>
 
+            <!-- Elemento de loading -->
+            <div id="loading" class="loading"></div>
+
+
+
         </div>
+
+
+        <!--MODAL RELATORIO DE RESERVA-->
 
         <div id="modal-relatorio">
 
@@ -153,16 +151,16 @@
                 </div>
             </div>
 
-            <!-- <span id="closeModal" class="material-symbols-outlined" onclick="closeModal()">
-                close
-            </span> -->
         </div>
 
-        <!--MODAL-->
-        <!-- <div id="modal-container">
-            <span class="close-modal">&times;</span>
-            <p>Reserva efetuada com sucesso</p>
-        </div> -->
+
+        <!-- Modal de preencha todos os campos -->
+        <div id="modalPreenchaCampos" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="fecharModalPreenchaCampos()">&times;</span>
+                <p>Preencha todos os campos!</p>
+            </div>
+        </div>
 
     </div>
 
@@ -178,11 +176,11 @@
                 <h1>Localização</h1>
                 <p>Rua Tito... Vila Romana</p>
                 <p>São Paulo - SP</p>
-                
+
 
                 <h1>Redes Sociais</h1>
                 <p>@utopiaBar</p>
-                
+
             </div>
 
             <div class="contato">
@@ -193,12 +191,12 @@
             </div>
 
             <div class="funcionamento">
-                
+
                 <h1>Horário de Funcionamento</h1>
                 <p>Segunda a sexta: 12:00 as 22:00 horas</p>
                 <p>Sabado: 11:00 as 00:00 horas</p>
                 <p>Domingo 12:00 as 23:00 horas</p>
-                
+
             </div>
         </div>
 

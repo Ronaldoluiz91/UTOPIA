@@ -93,55 +93,80 @@ setInterval(nextSlide, intervalTime);
 
 //Pagina reserva
 
-function enviarReserva(){
-var nome = document.getElementById('nomeReserva').value;
-var telefone = document.getElementById('telefoneReserva').value;
-var reserva = document.getElementById('reserva').value;
-var quantidade = document.getElementById('quantidade').value;
-var horario = document.getElementById('horarioReserva').value;
-var status = document.getElementById('status')
+function enviarReserva() {
 
-var inputDate = document.getElementById('dataReserva');
-// Adicionando um ouvinte de evento 'change' para capturar a mudança de valor
-inputDate.addEventListener('change', function() {
-    // Obtendo o valor do input
-    var dataReserva = this.value;
-});
+    var nome = document.getElementById('nomeReserva').value;
+    var telefone = document.getElementById('telefoneReserva').value;
+    var reserva = document.getElementById('reserva').value;
+    var quantidade = document.getElementById('quantidade').value;
+    var horario = document.getElementById('horarioReserva').value;
+    var status = document.getElementById('status')
+
+    var inputDate = document.getElementById('dataReserva');
+    // Adicionando um ouvinte de evento 'change' para capturar a mudança de valor
+    inputDate.addEventListener('change', function () {
+        // Obtendo o valor do input
+        var dataReserva = this.value;
+    });
 
 
+    // Função para mostrar o modal de preencha todos os campos
+    function mostrarModalPreenchaCampos() {
+        document.getElementById('modalPreenchaCampos').style.display = 'block';
+    }
+
+    //verifica se todos os campos estão preenchidos
     if (nome === "" || telefone === "" || reserva === "" || quantidade === "" || dataReserva === "" || horario === "") {
-        alert('preencha todos os campos')
-} else {
-    document.getElementById('reservaRelatorio').innerHTML = nome
-    document.getElementById('telRelatorio').innerHTML = telefone
-    document.getElementById('tipoRelatorio').innerHTML = reserva
-    document.getElementById('quantRelatorio').innerHTML = quantidade
-    document.getElementById('dataRelatorio').innerHTML = dataReserva.value
-    document.getElementById('horaRelatorio').innerHTML = horario
+        mostrarModalPreenchaCampos();
+    } else {
 
-    status.style.display ='block'
+        // Mostrar o loading
+        document.getElementById('loading').style.display = 'block';
 
-    var modalRelatorio = document.getElementById('modal-relatorio')
+        document.getElementById('reservaRelatorio').innerHTML = nome
+        document.getElementById('telRelatorio').innerHTML = telefone
+        document.getElementById('tipoRelatorio').innerHTML = reserva
+        document.getElementById('quantRelatorio').innerHTML = quantidade
+        document.getElementById('dataRelatorio').innerHTML = dataReserva.value
+        document.getElementById('horaRelatorio').innerHTML = horario
 
-    modalRelatorio.style.display ='block'
+        status.style.display = 'block'
+
+        var modalRelatorio = document.getElementById('modal-relatorio')
+
+        setTimeout(function () {
+            // Esconder o loading e mostrar o modal
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('modal-relatorio').style.display = 'block';
+        }, 3000);
 
 
-      // Limpar os campos após enviar
-      document.getElementById('nomeReserva').value = "";
-      document.getElementById('telefoneReserva').value = "";
-      document.getElementById('reserva').value = "";
-      document.getElementById('quantidade').value = "";
-      document.getElementById('dataReserva').value = "";
-      document.getElementById('horarioReserva').value = "";
+        // Limpar os campos após enviar
+        document.getElementById('nomeReserva').value = "";
+        document.getElementById('telefoneReserva').value = "";
+        document.getElementById('reserva').value = "";
+        document.getElementById('quantidade').value = "";
+        document.getElementById('dataReserva').value = "";
+        document.getElementById('horarioReserva').value = "";
 
-    } 
-  
+    }
+
+
 }
 
-function fechaModal(){
+
+function fechaModal() {
     var modalRelatorio = document.getElementById('modal-relatorio'); // Definido dentro da função
 
     modalRelatorio.style.display = 'none';
 }
+
+// Função para fechar o modal de preencha todos os campos
+function fecharModalPreenchaCampos() {
+    document.getElementById('modalPreenchaCampos').style.display = 'none';
+}
+
+
+
 
 

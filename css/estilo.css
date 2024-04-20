@@ -136,10 +136,7 @@ nav a:focus,
     margin-bottom: -15px;
 }
 
-.rodape p,
-li {
-    font-size: 16px;
-}
+
 
 .rodape img {
     margin: 0 68px;
@@ -288,6 +285,7 @@ hr {
 
 .texto1 {
     max-width: 292px;
+    font-family: "open sans";
 }
 
 .cozinha1 {
@@ -559,8 +557,35 @@ text-align: center;
     background-color: white;
     color: black;
     border-radius: 55px;
+    cursor: pointer;
 }
 
+
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #812b24;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    z-index: 9999; /* Certifique-se de que o loading está acima de outros elementos */
+    display: none; /* Inicialmente oculto */
+  }
+  
+  /* Animação de rotação */
+  @keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  
+
+
+
+  /*Modal da pagina reserva */
 
 #closeModal {
     margin-left: 90%;
@@ -578,8 +603,6 @@ text-align: center;
     /* margin-left: 28px; */
     padding: 2%;
     display: none;
-    
-
 }
 
 .modal-geral {
@@ -634,31 +657,44 @@ text-align: center;
 }
 
 
-
-
-
-
-
-/*confirme reserva*/
-.titulo-confirm-reserva {
-    text-align: center;
-}
-
-#confirm-reserva input,
-#confirm-reserva select {
-    border: solid 1px black;
+/* Estilos para o modal preencha todos os campos */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
     width: 100%;
-    margin: 4px auto;
-}
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  /* Modal preencha todos os campos */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* Estilos para o botão de fechar */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
 
-#confirm-reserva input,
-#confirm-reserva select {
-    height: 30px;
-}
-
-.confirm-reserva {
-    margin: 5%;
-}
 
 /*Pagina trabalhe conosco*/
 .trabalhe {
@@ -739,6 +775,7 @@ text-align: center;
 
     .rodape p {
         font-size: 13px;
+        font-family: "open sans";
     }
 
 
@@ -952,8 +989,8 @@ text-align: center;
     /* PAGINA RESERVA PARA TABLET */
 
     .conteudo-reserva {
-        margin-top: 15%;
-        width: 56%;
+        margin-top: 8%;
+        width: 50%;
     }
 
     /*MODAL */
@@ -986,16 +1023,12 @@ text-align: center;
     }
 
 
-    .conteudo-reserva {
-        width: 100%;
-    }
-
     .relatorio1 {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .relatorioReserva {
-        font-size: 15px;
+        font-size: 16px;
     }
 
 
@@ -1060,6 +1093,10 @@ text-align: center;
 
     .rodape-conteudo {
         gap: 30px;
+    }
+
+    .rodape p{
+        font-size: 15px;
     }
 
 
@@ -1218,6 +1255,11 @@ text-align: center;
     /* PAGINA RESERVA PARA DESKTOP */
 
 
+    #form-reserva input , #form-reserva select{
+        width: 65%;
+    }
+
+
 
     .conteudo-reserva {
         margin-top: 5%;
@@ -1229,30 +1271,12 @@ text-align: center;
         display: none;
     }
 
-    /* 
-    #modal-relatorio {
-        margin-top: 240px;
-        background-color: white;
-        height: 260px;
-        width: 370px;
-        border-radius: 10px;
-        box-shadow: black 1px 1px 5px;
-        position: absolute;
-        display: none;
-        margin-left: 100px;
-        padding: 30px;
-    } */
-
-    /* .relatorio1{
-        display: none;
-    } */
-
 
     #modal-relatorio {
         margin-top: 75px;
         margin-left: 0%;
         width: 460px;
-        height: 440px;
+        
     }
 
     .modal1 {
@@ -1271,25 +1295,14 @@ text-align: center;
 
     .conteudo-reserva {
         height: 565px;
-        width: 50%;
+        width: 40%;
     }
 
-    /* #reservar {
-        margin-left: 45%;
-    } */
 
-    .relatorio1 {
-        font-size: 20px;
-    }
-
-    .relatorioReserva {
-        font-size: 20px;
-    }
 
     .modalAnime {
-
-        margin-left: -70px;
-        gap: 146px;
+        margin-left: -40px;
+        gap: 100px;
     }
 
     .modalAnime h4 {
@@ -1302,7 +1315,7 @@ text-align: center;
 
 
 
-/*Pagina cardapio para notebook */
+/*cardsda pagina cardapio para notebook */
 
 @media screen and (min-width:1024PX) {
 
