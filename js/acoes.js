@@ -48,7 +48,7 @@ var totalImages = 7;
 function dissolveImages() {
     var currentImg = document.getElementById('img' + image);
 
-    var nextImage = image === totalImages ? 1 : image + 1;  //image for igual ao número total de imagens (totalImages), 
+    var nextImage = image === totalImages ? 1 : image + 1;  //se image for igual ao número total de imagens (totalImages), 
     //então nextImage será 1 (voltando ao início do carrossel). 
     // Caso contrário, nextImage será o próximo número após image.
 
@@ -62,7 +62,7 @@ function dissolveImages() {
     image = nextImage;
 
     // Chama a função novamente após um intervalo
-    setTimeout(dissolveImages, 4000); // Tempo de transição entre as imagens
+    setTimeout(dissolveImages, 5000); // Tempo de transição entre as imagens
 }
 
 // Inicia a dissolução das imagens

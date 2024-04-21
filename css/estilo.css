@@ -637,7 +637,7 @@ text-align: center;
     margin-top: -15px;
 }
 
-.modalAnime {
+.tituloModal {
     display: flex;
     align-items: flex-end;
     margin-left: 5px;
@@ -1044,11 +1044,11 @@ text-align: center;
         gap: 35px; */
     }
 
-    .modalAnime {
+    .tituloModal {
         gap: 110px;
     }
 
-    .modalAnime h4 {
+    .tituloModal h4 {
         font-size: 20px;
     }
 
@@ -1340,12 +1340,12 @@ text-align: center;
 
 
 
-    .modalAnime {
+    .tituloModal {
         margin-left: -40px;
         gap: 100px;
     }
 
-    .modalAnime h4 {
+    .tituloModal h4 {
         font-size: 30px;
     }
 
@@ -1355,7 +1355,9 @@ text-align: center;
 
 
 
-/*cardsda pagina cardapio para notebook */
+
+
+/*cards da pagina cardapio para notebook */
 
 @media screen and (min-width:1024PX) {
 
