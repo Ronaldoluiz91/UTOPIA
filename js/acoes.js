@@ -39,32 +39,64 @@ btnOcultar.addEventListener('click', function () {
 
 
 
-// Slider da pagina de abertura pagina Index
+// Slider de abertura da pagina Index
 
-function slide1() {
-    document.getElementById('img1Carrosel').src = "imagens/utopia6.jpeg";
-    setTimeout("slide2()", 3000)
+var image = 1;
+var totalImages = 7;
+
+
+function dissolveImages() {
+    var currentImg = document.getElementById('img' + image);
+
+    var nextImage = image === totalImages ? 1 : image + 1;  //image for igual ao número total de imagens (totalImages), 
+    //então nextImage será 1 (voltando ao início do carrossel). 
+    // Caso contrário, nextImage será o próximo número após image.
+
+    var nextImg = document.getElementById('img' + nextImage); // obtém o elemento de imagem que será exibido em seguida, com base no valor de nextImage.
+
+    // Alterna entre as imagens
+    currentImg.style.opacity = 0;
+    nextImg.style.opacity = 1;
+
+    // Atualiza o número da próxima imagem
+    image = nextImage;
+
+    // Chama a função novamente após um intervalo
+    setTimeout(dissolveImages, 4000); // Tempo de transição entre as imagens
 }
 
-function slide2() {
-    document.getElementById('img1Carrosel').src = "imagens/utopia2.jpeg";
-    setTimeout("slide3()", 3000)
-}
+// Inicia a dissolução das imagens
+dissolveImages();
 
-function slide3() {
-    document.getElementById('img1Carrosel').src = "imagens/utopia1.jpeg";
-    setTimeout("slide4()", 3000)
-}
 
-function slide4() {
-    document.getElementById('img1Carrosel').src = "imagens/utopia5.jpeg";
-    setTimeout("slide5()", 3000)
-}
 
-function slide5() {
-    document.getElementById('img1Carrosel').src = "imagens/group-cocktail-shot.jpg";
-    setTimeout("slide1()", 3000)
-}
+
+
+// function slide1() {
+//     document.getElementById('img1Carrosel').src = "imagens/utopia6.jpeg";
+//     setTimeout("slide2()", 3000)
+// }
+
+// function slide2() {
+//     document.getElementById('img1Carrosel').src = "imagens/utopia2.jpeg";
+//     setTimeout("slide3()", 3000)
+// }
+
+// function slide3() {
+//     document.getElementById('img1Carrosel').src = "imagens/utopia1.jpeg";
+//     setTimeout("slide4()", 3000)
+// }
+
+// function slide4() {
+//     document.getElementById('img1Carrosel').src = "imagens/utopia5.jpeg";
+//     setTimeout("slide5()", 3000)
+// }
+
+// function slide5() {
+//     document.getElementById('img1Carrosel').src = "imagens/group-cocktail-shot.jpg";
+//     setTimeout("slide1()", 3000)
+// }
+
 
 
 
