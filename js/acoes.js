@@ -200,5 +200,28 @@ function fecharModalPreenchaCampos() {
 
 
 
+// pagina contato
 
-
+function enviarFormulario() {
+    var nome = document.getElementById("nome").value;
+    var telefone = document.getElementById("telefone").value;
+    var assunto = document.getElementById("assunto").value;
+    var mensagem = document.getElementById("mensagem").value;
+  
+    if (nome && telefone && assunto && mensagem) {
+      mostrarModal('modal-enviado');
+    } else {
+      mostrarModal('modal-nao-preenchido');
+    }
+  }
+  
+  function mostrarModal(id) {
+    var modal = document.getElementById(id);
+    modal.style.display = "block";
+  }
+  
+  function fecharModal(id) {
+    var modal = document.getElementById(id);
+    modal.style.display = "none";
+  }
+  

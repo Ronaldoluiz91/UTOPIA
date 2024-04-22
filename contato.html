@@ -50,6 +50,11 @@
         <div class="conteudo-contato">
             <p> Deixe-nos uma mensagem e uma forma de contato para resposta.</p>
             <p>Em breve retornaremos</p>
+
+
+
+
+
             <form action="" id="form-contato" method="post">
                 <p>
                     <label for="nome">Nome:</label>
@@ -60,22 +65,39 @@
                     <input tabindex="6" required type="tel" id="telefone" name="telefone">
                 </p>
                 <label for="assunto">Assunto:</label>
-                <select name="assunto" id="assunto">
+                <select name="assunto" id="assunto" required>
                     <option value=""></option>
-                    <option value="">Elogios</option>
-                    <option value="">Reclamações</option>
-                    <option value="">Outros</option>
+                    <option value="elogios">Elogios</option>
+                    <option value="reclamacoes">Reclamações</option>
+                    <option value="outros">Outros</option>
                 </select>
                 <p>
                     <label for="mensagem">Mensagem:</label>
-                    <textarea tabindex="7" name="mensagem" id="mensagem" cols="30" rows="6"></textarea>
+                    <textarea tabindex="7" name="mensagem" id="mensagem" cols="30" rows="6" required></textarea>
                 </p>
                 <p>
-                    <button tabindex="8" id="limpar" type="reset" name="limpar">Limpar Campos</button>
-                    <button tabindex="9" id="enviarContato" name="enviar">Enviar mensagem</button>
+                    <div tabindex="9" id="enviarContato" name="enviar" onclick="enviarFormulario()">Enviar mensagem</div>
                 </p>
             </form>
-        </div>
+            
+            <div id="modal-enviado" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="fecharModal('modal-enviado')">&times;</span>
+                <h2>Confirmação de Envio</h2>
+                <p>Sua mensagem foi enviada com sucesso!</p>
+              </div>
+            </div>
+            
+            <div id="modal-nao-preenchido" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="fecharModal('modal-nao-preenchido')">&times;</span>
+                <h2>Erro</h2>
+                <p>Por favor, preencha todos os campos antes de enviar.</p>
+              </div>
+            </div>
+            
+
+         
     </div>
     <footer class="rodape">
         <div class="endereco">
@@ -83,7 +105,7 @@
                 <a href="index.html"><img src="imagens/utopiaLogo-removebg-preview.png" alt="Logotipo"></a>
             </div>
 
-            <div  class="locali">
+            <div class="locali">
                 <h1>Localização</h1>
                 <p>Rua Tito... Vila Romana</p>
                 <p>São Paulo - SP</p>
@@ -102,7 +124,7 @@
             </div>
 
             <div class="funcionamento">
-                
+
                 <h1>Horário de Funcionamento</h1>
                 <p>Segunda a sexta: 12:00 as 22:00 horas</p>
                 <p>Sabado: 11:00 as 00:00 horas</p>
