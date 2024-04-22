@@ -70,8 +70,6 @@ dissolveImages();
 
 
 
-
-
 // function slide1() {
 //     document.getElementById('img1Carrosel').src = "imagens/utopia6.jpeg";
 //     setTimeout("slide2()", 3000)
@@ -96,8 +94,6 @@ dissolveImages();
 //     document.getElementById('img1Carrosel').src = "imagens/group-cocktail-shot.jpg";
 //     setTimeout("slide1()", 3000)
 // }
-
-
 
 
 // slider- cardapio pagina index
@@ -183,9 +179,7 @@ function enviarReserva() {
 
     }
 
-
 }
-
 
 function fechaModal() {
     var modalRelatorio = document.getElementById('modal-relatorio'); // Definido dentro da função
@@ -210,18 +204,27 @@ function enviarFormulario() {
   
     if (nome && telefone && assunto && mensagem) {
       mostrarModal('modal-enviado');
+      limparFormulario();
     } else {
       mostrarModal('modal-nao-preenchido');
-    }
+    }    
   }
   
-  function mostrarModal(id) {
+  function mostrarModal(id) {  //Esta função recebe um parâmetro id, que é o ID do modal que deve ser exibido. 
+    //Ela encontra o modal correspondente usando document.getElementById(id)
     var modal = document.getElementById(id);
     modal.style.display = "block";
   }
   
-  function fecharModal(id) {
+  function fecharModal(id) { //esta função recebe um parâmetro id, que é o ID do modal que deve ser fechado.
+    // Ela encontra o modal correspondente usando document.getElementById(id)
     var modal = document.getElementById(id);
     modal.style.display = "none";
   }
   
+  function limparFormulario() {
+    document.getElementById("nome").value = "";
+    document.getElementById("telefone").value = "";
+    document.getElementById("assunto").value = "";
+    document.getElementById("mensagem").value = "";
+  }
