@@ -657,11 +657,11 @@ text-align: center;
     /* height: 260px; */
     /* width: 60%; */
     border-radius: 10px;
-    box-shadow: black 1px 1px 5px;
     position: absolute;
     /* margin-left: 28px; */
     padding: 2%;
     display: none;
+    border: solid black 1px;
 }
 
 .modal-geral {
@@ -669,8 +669,7 @@ text-align: center;
     /* margin-top: 50px; */
     margin-left: 5px;
     gap: 41px;
-    font-weight: bold;
-    font-family: "open sans";
+    
 }
 
 
@@ -684,7 +683,7 @@ text-align: center;
     display: flex;
     align-items: flex-end;
     margin-left: 5px;
-    gap: 75px;
+    gap: 50px;
 }
 
 
@@ -934,7 +933,7 @@ text-align: center;
         font-weight: 600;
         font-style: normal;
         font-size: 35px;
-        margin-bottom: 25px;
+        margin-bottom: 5px;
         text-transform: uppercase;
 
     }
@@ -970,7 +969,7 @@ text-align: center;
     }
 
     .Cozinha {
-        margin: -38px;
+        /* margin: -38px; */
         padding: 20px;
     }
 
@@ -1034,6 +1033,7 @@ text-align: center;
         margin: auto;
     margin-bottom: 0px;
     margin-top: 18px;
+    font-size: 13px;
         
     }
 
@@ -1295,6 +1295,11 @@ text-align: center;
 
     /*PAGINA CARDAPIO PARA DESKTOP*/
 
+
+    .menu-cardap a {
+        font-size: 20px;
+    }
+
     .cardapio-t {
         display: flex;
         flex-wrap: wrap;
@@ -1323,10 +1328,6 @@ text-align: center;
         font-weight: 600;
         background: linear-gradient(to left, #812b24, rgb(233, 189, 189));
         margin-bottom: 9px;
-    }
-
-    .menu-cardapios h3 {
-        font-family: 'Open Sans';
     }
 
     .textTam {
@@ -1395,8 +1396,8 @@ text-align: center;
 
 
     .tituloModal {
-        margin-left: -40px;
-        gap: 100px;
+        margin-left: -10px;
+        gap: 60px;
     }
 
     .tituloModal h4 {
