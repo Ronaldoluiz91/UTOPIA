@@ -238,6 +238,7 @@ hr {
 
 #imgContainer{
     margin-top: 1px;
+    object-fit: cover;
 }
 
 
@@ -560,9 +561,26 @@ button a {
 
 /*Pagina reserva*/
 
+#form-reserva h3{
+    
+    margin: 0;
+}
+
+.conteudo-reserva-pai{
+    background-image: url('../imagens/parallax-barman.jpeg');
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-attachment: fixed;
+}
+
 #form-reserva {
-    margin: 5px;
-    max-width: 100%;
+    /* margin: 5%; */
+    /* width: 70%; */
+    /* height: 55%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -571,30 +589,29 @@ button a {
 #form-reserva input,
 #form-reserva select {
     border: solid 1px black;
-    width: 92%;
-    margin: 4px auto;
+    width: 70%;
+    /* margin: 4px auto; */
+    height: 10%;
+    border-radius: 10px;
 }
 
-#form-reserva input,
+/* #form-reserva input,
 #form-reserva select {
     height: 30px;
-}
+} */
 
 #form-reserva p {
     margin-bottom: auto;
 }
 
-.conteudo-reserva-pai {
-    justify-content: center;
-    margin: 3%;
-    display: flex;
-}
+
 
 .conteudo-reserva {
     text-align: center;
-    background-color: #f0e1df;
-    border-radius: 15px;
-    width: 100%;
+    background-color: #f0e1df7f;
+    border-radius: 35px;
+    width: 40%;
+    height: 440px;
     color: black;
 }
 
@@ -1064,10 +1081,7 @@ button a {
 
     /* PAGINA RESERVA PARA TABLET */
 
-    .conteudo-reserva {
-        margin-top: 8%;
-        width: 50%;
-    }
+   
 
     /*MODAL */
 
@@ -1361,9 +1375,9 @@ button a {
 
 
     .conteudo-reserva {
-        margin-top: 5%;
-        width: 800px;
-        height: 650PX;
+        /* margin-top: 5%; */
+        /* width: 800px;
+        height: 455PX; */
     }
 
     #status {
@@ -1392,10 +1406,7 @@ button a {
     }
 
 
-    .conteudo-reserva {
-        height: 565px;
-        width: 40%;
-    }
+   
 
 
 
