@@ -85,6 +85,7 @@ h1 img {
 }
 
 
+
 #itens {
     min-height: 40px;
     font-weight: bold;
@@ -98,13 +99,15 @@ h1 img {
 
 }
 
+
+
 nav a:link,
 nav a:visited,
 #iconMenu:link,
 #iconMenu:visited {
     text-decoration: none;
     color: white;
-    transition: background-color 1s;
+    transition: background-color 3s;
     min-height: inherit;
     display: flex;
     justify-content: center;
@@ -236,7 +239,7 @@ hr {
     height: 250px;
 }
 
-#imgContainer{
+#imgContainer {
     margin-top: 1px;
     object-fit: cover;
 }
@@ -283,7 +286,7 @@ hr {
     width: 380px;
     margin-bottom: -25px;
     border-radius: 5px;
-
+    object-fit: cover;
 }
 
 /* .bemVindoGeral {
@@ -314,10 +317,10 @@ hr {
 
 .cozinha1 {
     display: flex;
-    gap: 15px;
+    /* gap: 15px; */
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     /* margin-left: 92px; */
 }
 
@@ -326,23 +329,35 @@ hr {
     gap: 5px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 
-.fundoGaleria{
-    background-color: #c0d4ef;
+.galeria img {
+    border-radius: 15px;
+}
+
+.fundoGaleria {
+    /* background-color: #c0d4ef; */
     text-align: center;
     font-family: 'alegreya SC';
+    background-color: #1D9E4F;
+    height: 1130px;
     
 }
 
-.fundoGaleria h2{
+.fundoGaleria h2 {
     margin-top: 20px;
+}
+
+.fundoGaleria2{
+    background-color: white;
+    position: absolute;
 }
 
 .galeria img {
     width: 115px;
     height: 120px;
+    object-fit: cover;
 }
 
 
@@ -355,7 +370,7 @@ hr {
 .vejaCardapio {
     text-align: center;
     margin-bottom: 5px;
-    margin-top: 30px;
+    margin-top: -15px;
     background-color: black;
     color: white;
     padding: 5px;
@@ -566,31 +581,31 @@ button a {
 
 /*Pagina reserva*/
 
-#form-reserva h3{
-    
+#form-reserva h3 {
+
     margin: 0;
 }
 
-.conteudo-reserva-pai{
-    background-image: url('../imagens/parallax-barman.jpeg');
+.conteudo-reserva-pai {
+    background-image: url('../imagens/texturas/Baixar\ Vetor\ de\ fundo\ aquarela\ colorido\ bonito\ gratuitamente.jpeg');
     width: 100vw;
-    height: 64vh;
+    height: 54vh;
     /* background-size: cover; */
     justify-content: center;
     display: flex;
     align-items: center;
     background-attachment: fixed;
-background-repeat: no-repeat;
+    background-repeat: no-repeat;
 }
 
 #form-reserva {
-    /* margin: 5%; */
-    /* width: 70%; */
-    /* height: 55%; */
+    margin-top: -6%;
+    height: 84%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 
 #form-reserva input,
 #form-reserva select {
@@ -617,7 +632,7 @@ background-repeat: no-repeat;
     background-color: #f0e1df2c;
     border-radius: 35px;
     width: 85%;
-    height: 440px;
+    height: 410px;
     color: white;
 }
 
@@ -888,7 +903,7 @@ background-repeat: no-repeat;
         height: 80px;
     }
 
-    #topo div{
+    #topo div {
         height: 0px;
     }
 
@@ -926,6 +941,7 @@ background-repeat: no-repeat;
 
     .carousel-img {
         height: 440px;
+        object-fit: cover;
     }
 
 
@@ -994,7 +1010,7 @@ background-repeat: no-repeat;
     }
 
     .card-bemvindo p {
-
+        margin-top: 40px;
         text-align: center;
     }
 
@@ -1030,6 +1046,16 @@ background-repeat: no-repeat;
         cursor: pointer;
     }
 
+    .fundoGaleria {
+        height: 1447px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .fundoGaleria2{
+        width: 70%;
+    }
+
 
     .texto1 {
         text-align: center;
@@ -1040,17 +1066,17 @@ background-repeat: no-repeat;
         font-style: italic;
     }
 
-   
+
 
 
     /*PAGINA CARDAPIO TABLET */
 
-  
+
 
     .menu-cardap {
 
         display: flex;
-        margin-top: 126px;
+        margin-top: 82px;
         height: 50px;
     }
 
@@ -1087,16 +1113,16 @@ background-repeat: no-repeat;
 
     /* PAGINA RESERVA PARA TABLET */
 
-    .conteudo-reserva-pai{
+    .conteudo-reserva-pai {
         background-repeat: no-repeat;
         background-size: cover;
         height: 100vh;
     }
 
-    .conteudo-reserva{
+    .conteudo-reserva {
         width: 55%;
     }
-   
+
 
     /*MODAL */
 
@@ -1276,9 +1302,35 @@ background-repeat: no-repeat;
         margin-left: -110px;
     }
 
+
+    .galeria{
+        margin-top: 10px;
+    }
     .galeria img {
-        width: 400px;
-        height: 250px;
+        width: 334px;
+        height: 240px;
+    }
+    
+
+    .fundoGaleria {
+        height: 1400px;
+        justify-content: center;
+        display: flex;
+    }
+
+    .fundoGaleria h2{
+        font-size: 50px;
+    }
+    
+
+    .fundoGaleria2{
+        background-color: white;
+        position: absolute;
+        /* padding: 9px; */
+        width: 80%;
+        height: 1385px;
+        display: flex;
+        flex-direction: column;
     }
 
     .vejaCardapio h1 {
@@ -1313,6 +1365,7 @@ background-repeat: no-repeat;
 
     .carousel-img {
         height: 800px;
+        object-fit: cover;
     }
 
     .bemVindoGeral {
@@ -1391,7 +1444,7 @@ background-repeat: no-repeat;
 
     .conteudo-reserva {
         /* margin-top: 5%; */
-         width: 40%;
+        width: 40%;
         /* height: 455PX;  */
     }
 
@@ -1421,7 +1474,7 @@ background-repeat: no-repeat;
     }
 
 
-   
+
 
 
 
