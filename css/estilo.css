@@ -115,7 +115,7 @@ nav a:visited,
     position: relative;
     bottom: 15px;
     font-family: "open sans", sans-serif;
-
+text-transform: uppercase;
 }
 
 nav a:hover,
@@ -410,15 +410,29 @@ button a {
     text-align: center;
     background-color: black;
     color: white;
-    text-transform: uppercase;
     padding: 2px;
+}
 
-
+.menu-cardap img{
+    width: 40px;
+    height: 40px;
 }
 
 .menu-cardap a {
     text-decoration: none;
     color: white;
+    font-family: "open sans", sans-serif;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.menu-cardap a:hover{
+    background-color: #B06761;
+    /* color: black; */
+    transition: 1s;
+    
 }
 
 .menu-cardap hr {
@@ -443,6 +457,7 @@ button a {
     background-color: #B06761;
     color: white;
     padding: 5px;
+    font-family: "Alegreya SC";
 }
 
 .preço {
@@ -587,7 +602,6 @@ button a {
 }
 
 .conteudo-reserva-pai {
-    background-image: url('../imagens/texturas/Baixar\ Vetor\ de\ fundo\ aquarela\ colorido\ bonito\ gratuitamente.jpeg');
     width: 100vw;
     height: 54vh;
     /* background-size: cover; */
@@ -600,7 +614,7 @@ button a {
 
 #form-reserva {
     margin-top: -6%;
-    height: 84%;
+    /* height: 84%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -629,7 +643,7 @@ button a {
 
 .conteudo-reserva {
     text-align: center;
-    background-color: #f0e1df2c;
+    background-color: #874137;
     border-radius: 35px;
     width: 85%;
     height: 410px;
@@ -911,7 +925,7 @@ button a {
     #itens {
         display: block;
         display: flex;
-        gap: 50px;
+        gap: 40px;
         background-color: #ffffff00;
         justify-content: flex-end;
         margin-top: -36px;
@@ -1074,19 +1088,19 @@ button a {
 
 
     .menu-cardap {
-
+        gap: 7px;
         display: flex;
         margin-top: 82px;
-        height: 50px;
+        height: 55px;
     }
 
     .menu-cardap a {
-
         margin: auto;
-        margin-bottom: 0px;
-        margin-top: 18px;
         font-size: 13px;
-
+        /* border: solid white 1px; */
+        border-radius: 5px;
+        box-shadow: white 0px 0px 4px 0px;
+        width: 100%;
     }
 
     .menu-cardap hr {
@@ -1382,7 +1396,7 @@ button a {
 
 
     .menu-cardap a {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .cardapio-t {
