@@ -270,6 +270,7 @@ hr {
 .bem-vindo {
     padding: 20px;
     text-align: center;
+    /* background-color: #B06761; */
 }
 
 /* .fundoBemvindo{
@@ -295,7 +296,7 @@ hr {
 } */
 
 .bem-vindo p {
-
+font-family: "open sans", sans-serif;
     text-align: center;
 }
 
@@ -336,23 +337,17 @@ hr {
     border-radius: 15px;
 }
 
-.fundoGaleria {
-    /* background-color: #c0d4ef; */
-    text-align: center;
-    font-family: 'alegreya SC';
-    background-color: #1D9E4F;
-    height: 1130px;
-    
-}
 
-.fundoGaleria h2 {
+
+.fundoGaleria2 h2 {
     margin-top: 20px;
+    text-align: center;
+    font-family: "Alegreya SC", serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
-.fundoGaleria2{
-    background-color: white;
-    position: absolute;
-}
+
 
 .galeria img {
     width: 115px;
@@ -420,12 +415,13 @@ button a {
 
 .menu-cardap a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-family: "open sans", sans-serif;
     align-items: center;
     display: flex;
-    gap: 10px;
+    gap: 3px;
     justify-content: center;
+    background-color: white;
 }
 
 .menu-cardap a:hover{
@@ -472,6 +468,7 @@ button a {
     height: 70px;
     border-radius: 5px;
     margin: 0;
+    object-fit: cover;
 }
 
 .card-cardapio {
@@ -481,6 +478,9 @@ button a {
     padding: 3px;
     background-color: white;
     text-align: justify;
+    border: solid gray 0.01rem;
+    border-radius: 5px;
+    box-shadow: gray 1px 2px 3px 0px;
 }
 
 .textTam {
@@ -972,18 +972,22 @@ button a {
     }
 
     .bem-vindo {
-        padding: 5px;
+        padding: 15px;
+    text-align: center;
+    /* background-color: #E1BEE7; */
+    margin-top: -28px;
     }
 
     .bem-vindo img {
         height: 145px;
         width: 216px;
+        border-radius: 15px;
     }
 
     .bem-vindo p {
         font-size: 16px;
         text-align: center;
-        margin-top: 25px;
+        /* margin-top: 25px; */
     }
 
     .bem-vindo h2 {
@@ -1018,14 +1022,24 @@ button a {
 
     .card-bemvindo {
         display: flex;
-        text-align: center;
+        /* text-align: center; */
         flex-direction: column;
         align-items: center;
     }
 
     .card-bemvindo p {
-        margin-top: 40px;
+        /* margin-top: 40px; */
         text-align: center;
+    }
+
+    .cards-index{
+        background-color: white;
+        width: 33%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 15px;
     }
 
     /* .Cozinha {
@@ -1035,10 +1049,10 @@ button a {
 
     .cozinha1 {
         display: flex;
-        justify-content: space-around;
         /* gap: 30px; */
         flex-wrap: nowrap;
-        margin-bottom: 45px;
+        /* margin-bottom: 45px; */
+        justify-content: space-between;
     }
 
 
@@ -1060,16 +1074,6 @@ button a {
         cursor: pointer;
     }
 
-    .fundoGaleria {
-        height: 1447px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .fundoGaleria2{
-        width: 70%;
-    }
-
 
     .texto1 {
         text-align: center;
@@ -1088,17 +1092,17 @@ button a {
 
 
     .menu-cardap {
-        gap: 7px;
+        gap: 2px;
         display: flex;
         margin-top: 82px;
-        height: 55px;
+        height: 40px;
     }
 
     .menu-cardap a {
-        margin: auto;
-        font-size: 13px;
+        margin: 2px;
+        font-size: 20px;
         /* border: solid white 1px; */
-        border-radius: 5px;
+        border-radius: 10px;
         box-shadow: white 0px 0px 4px 0px;
         width: 100%;
     }
@@ -1269,8 +1273,8 @@ button a {
     }
 
     .bem-vindo img {
-        width: 425px;
-        height: 350px;
+        width: 90%;
+        height: 300px;
     }
 
     .bem-vindo h2 {
@@ -1279,7 +1283,7 @@ button a {
     }
 
     .card-bemvindo p {
-        font-size: 30px;
+        font-size: 25px;
         width: 390px;
         margin-left: -50px;
     }
@@ -1291,18 +1295,17 @@ button a {
 
     }
 
-    .Cozinha {
+    .cards-index{
+        height: 595px;
+    }
+
+    /* .Cozinha {
         display: flex;
         justify-content: space-between;
         margin: 2px;
         flex-direction: column;
         gap: 25px;
-    }
-
-    .Cozinha img {
-        width: 430px;
-        height: 370px;
-    }
+    } */
 
     .cozinha1 {
         gap: 0px;
@@ -1326,26 +1329,13 @@ button a {
     }
     
 
-    .fundoGaleria {
-        height: 1400px;
-        justify-content: center;
-        display: flex;
-    }
 
-    .fundoGaleria h2{
-        font-size: 50px;
+
+    .fundoGaleria2 h2{
+        font-size: 70px;
     }
     
 
-    .fundoGaleria2{
-        background-color: white;
-        position: absolute;
-        /* padding: 9px; */
-        width: 80%;
-        height: 1385px;
-        display: flex;
-        flex-direction: column;
-    }
 
     .vejaCardapio h1 {
         font-size: 70px;
@@ -1396,7 +1386,7 @@ button a {
 
 
     .menu-cardap a {
-        font-size: 16px;
+        font-size: 25px;
     }
 
     .cardapio-t {
